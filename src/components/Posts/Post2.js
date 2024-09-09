@@ -23,7 +23,7 @@ function Post2() {
     fetchPost();
   }, []);
 
-  // Rendering logic
+  
   if (error) {
     return <div>Error: {error}</div>;
   }
@@ -42,6 +42,7 @@ function Post2() {
             <li>{post.title.rendered}</li>
           </ul>
           <h1>{post.title.rendered}</h1>
+         
         </div>
       </section>
 

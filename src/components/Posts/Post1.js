@@ -5,7 +5,6 @@ const Post1 = ()=> {
   const [post, setPost] = useState(null);
   const [error, setError] = useState(null);
 
-  // Fetching post data from the API
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -23,7 +22,7 @@ const Post1 = ()=> {
     fetchPost();
   }, []);
 
-  // Rendering logic
+
   if (error) {
     return <div>Error: {error}</div>;
   }
@@ -40,7 +39,8 @@ const Post1 = ()=> {
             <li>
               <a href="/">Home</a>
             </li>
-            <li>{post.title.rendered}</li>
+            
+            <li>{post.title.rendered}</li>  
           </ul>
           <h1>{post.title.rendered}</h1>
         </div>
